@@ -50,7 +50,7 @@ function getHumanChoice() {
     }
 }
 
-// Print human's choice
+// Print human's choice string
 console.log(getHumanChoice());
 
 // IF CPU choice is the same as player choice THEN
