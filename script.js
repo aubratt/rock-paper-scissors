@@ -50,8 +50,12 @@ function getHumanChoice() {
     }
 }
 
-// Print human's choice string
+// Print human's choice
 console.log(getHumanChoice());
+
+// Initialize score variables
+let computerScore = 0;
+let humanScore = 0;
 
 // IF CPU choice is the same as player choice THEN
     // Tie
