@@ -7,16 +7,13 @@ function getComputerChoice() {
     // If the random number is 1, computer chooses paper
     // If the random number is 2, computer chooses scissors
     if (randomNumber === 0) {
-        return "rock"
+        return "rock";
     } else if (randomNumber === 1) {
-        return "paper"
+        return "paper";
     } else {
-        return "scissors"
+        return "scissors";
     }
 }
-
-// Print computer's choice
-console.log(getComputerChoice());
 
 // GET human choice
 function getHumanChoice() {
@@ -50,31 +47,61 @@ function getHumanChoice() {
     }
 }
 
-// Print human's choice
-console.log(getHumanChoice());
-
 // Initialize score variables
 let computerScore = 0;
 let humanScore = 0;
 
-// IF CPU choice is the same as player choice THEN
-    // Tie
-// ELSE IF CPU choice is rock THEN
-    // IF player choice is paper THEN
-        // Player wins
-    // ELSE
-        // CPU wins
-    // ENDIF
-// ELSE IF CPU choice is paper THEN
-    // IF player choice is rock THEN
-        // CPU wins
-    // ELSE
-        // Player wins
-    // ENDIF
-// ELSE IF CPU choice is scissors THEN
-    // IF player choice is rock THEN
-        // Player wins
-    // ELSE
-        // CPU wins
-    // ENDIF
-// ENDIF
+// Play a single round
+function playRound(humanChoice, computerChoice) {
+    // If human choice is the same as computer choice, the round is a tie
+
+    // If human choice is rock and computer choice is paper, computer wins the round
+    // If human choice is rock and computer choice is scissors, human wins the round
+
+    // If human choice is paper and computer choice is rock, human wins the round
+    // If human choice is paper and computer choice is scissors, computer wins the round
+
+    // If human choice is scissors and computer choice is rock, computer wins the round
+    // If human choice is scissors and computer choice is paper, human wins the round
+
+    if (humanChoice === computerChoice) {
+        return `Tie! Both players chose ${humanChoice}.`;
+    } else if (humanChoice === "rock") {
+        if (computerChoice === "paper") {
+            console.log("Computer chooses paper...");
+            computerScore++;
+            return "You lose! Paper beats rock.";
+        } else {
+            console.log("Computer chooses scissors...");
+            humanScore++;
+            return "You win! Rock beats scissors.";
+        }
+    } else if (humanChoice === "paper") {
+        if (computerChoice === "rock") {
+            console.log("Computer chooses rock...");
+            humanScore++;
+            return "You win! Paper beats rock.";
+        } else {
+            console.log("Computer chooses scissors...");
+            computerScore++;
+            return "You lose! Scissors beats paper.";
+        }
+    } else {
+        if (computerChoice === "rock") {
+            console.log("Computer chooses rock...");
+            computerScore++;
+            return "You lose! Rock beats scissors.";
+        } else {
+            console.log("Computer chooses scissors...");
+            humanScore++;
+            return "You win! Rock beats scissors.";
+        }
+    }
+}
+
+// Get human and computer selections for 1 round
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+// Get result for 1 round
+console.log(playRound(humanSelection, computerSelection));
