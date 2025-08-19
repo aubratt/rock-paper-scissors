@@ -6,16 +6,15 @@ body {
 #header,
 #result-div,
 #btns-div,
-#score-div,
-#human-score-info,
-#computer-score-info {
+#scoreboard-div,
+.score-info {
     display: flex;
     justify-content: center;
 }
 
 #header,
 #playgame-div,
-#score-div {
+#scoreboard-div {
     border: 1px solid white;
     border-radius: 0.5rem;
 }
@@ -45,16 +44,31 @@ body {
     border-radius: 50%;
 }
 
-#score-div {
+#scoreboard-div {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
-.score-name {
-    height: 2rem;
+.score-info {
+    align-items: center;
+    gap: 0.5rem;
+    height: 3rem;
+    margin-bottom: 0.75rem;
 }
 
 .score-name,
-.score-div {
-    border: 1px solid red;
+.score-value {
+    background-color: #303030;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.score-name {
+    width: 10rem;
+}
+
+.score-value {
+    width: 5rem;
 }
