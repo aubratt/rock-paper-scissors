@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
-  </head>
-  <body></body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Paper Scissors</title>
+        <link href="styles.css" rel="stylesheet" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Rock, Paper, Scissors</h1>
+        </div>
+
+        <div id="playgame-div">
+            <div id="result-div">
+                <div class="result-text">Select a button below to SHOOT!</div>
+            </div>
+
+            <div id="btns-div">
+                <button id="rock-btn" class="play-btn">Rock</button>
+                <button id="paper-btn" class="play-btn">Paper</button>
+                <button id="scissors-btn" class="play-btn">Scissors</button>
+            </div>
+        </div>
+
+        <div id="score-div">
+            <h2 id="scoreboard-title">Scoreboard</h2>
+            <div id="human-score-info" class="score-info">
+                <div id="human-name" class="score-name">YOU</div>
+                <div id="human-score" class="score-div">0</div>
+            </div>
+            <div id="computer-score-info" class="score-info">
+                <div id="computer-name" class="score-name">COMPUTER</div>
+                <div id="computer-score" class="score-div">0</div>
+            </div>
+        </div>
+    </body>
 </html>

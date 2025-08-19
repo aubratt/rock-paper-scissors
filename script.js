@@ -40,5 +40,4 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {}
 
 document.addEventListener("DOMContentLoaded", function() {
-    loadButtons();
 });

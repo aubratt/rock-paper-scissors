@@ -1,0 +1,60 @@
+body {
+    color: white;
+    background-color: #212121;
+}
+
+#header,
+#result-div,
+#btns-div,
+#score-div,
+#human-score-info,
+#computer-score-info {
+    display: flex;
+    justify-content: center;
+}
+
+#header,
+#playgame-div,
+#score-div {
+    border: 1px solid white;
+    border-radius: 0.5rem;
+}
+
+#header,
+#playgame-div {
+    margin-bottom: 0.5rem;
+}
+
+#playgame-div {
+    padding: 2rem;
+}
+
+#result-div {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+#btns-div {
+    gap: 10%;
+}
+
+.play-btn {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+#score-div {
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-name {
+    height: 2rem;
+}
+
+.score-name,
+.score-div {
+    border: 1px solid red;
+}
