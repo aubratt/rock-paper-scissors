@@ -1,6 +1,42 @@
 body {
     color: white;
     background-color: #212121;
+    margin: 0;
+    overflow: hidden;
+}
+
+#content-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
+    max-width: 500px;
+}
+
+@media only screen and (max-width: 576px) {
+    #content-div {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        justify-content: center;
+        height: 100vh;
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 476px) {
+    html {
+        font-size: 14px;
+    }
+
+    #content-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        max-width: 300px;
+    }
 }
 
 #header,
@@ -19,7 +55,7 @@ body {
 #scoreboard-div,
 #game-options-div,
 #about-div {
-    border: 1px solid white;
+    border: 1px solid #c0c0c0;
     border-radius: 0.5rem;
 }
 
