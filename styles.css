@@ -87,6 +87,27 @@ body {
     border-radius: 50%;
 }
 
+#rock-btn {
+    border: 3px solid darkred;
+    background-color:crimson;
+}
+
+#paper-btn {
+    border: 3px solid royalblue;
+    background-color: deepskyblue;
+}
+
+#scissors-btn {
+    border: 3px solid seagreen;
+    background-color: mediumseagreen;
+}
+
+.btn-icon {
+    height: 2.5rem;
+    width: auto;
+    filter: invert(25%);
+}
+
 #scoreboard-div {
     flex-direction: column;
     align-items: center;
