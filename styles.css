@@ -7,20 +7,26 @@ body {
 #result-div,
 #btns-div,
 #scoreboard-div,
-.score-info {
+.score-info,
+#game-options-div,
+#about-div {
     display: flex;
     justify-content: center;
 }
 
 #header,
 #playgame-div,
-#scoreboard-div {
+#scoreboard-div,
+#game-options-div,
+#about-div {
     border: 1px solid white;
     border-radius: 0.5rem;
 }
 
 #header,
-#playgame-div {
+#playgame-div,
+#scoreboard-div,
+#game-options-div {
     margin-bottom: 0.5rem;
 }
 
@@ -39,8 +45,9 @@ body {
 }
 
 .play-btn {
-    height: 5rem;
-    width: 5rem;
+    flex-shrink: 0;
+    height: 4.5rem;
+    width: 4.5rem;
     border-radius: 50%;
 }
 
@@ -66,9 +73,21 @@ body {
 }
 
 .score-name {
-    width: 10rem;
+    width: 9rem;
 }
 
 .score-value {
-    width: 5rem;
+    width: 4rem;
+}
+
+#game-options-div {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+#about-div {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem 2rem 2rem;
 }
