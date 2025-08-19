@@ -1,3 +1,31 @@
+function loadButtons() {
+    // Create buttons div
+    const btnsDiv = document.createElement("div");
+    btnsDiv.id = "btns-div";
+
+    // Format buttons div
+
+    // Append buttons div to body
+    document.body.appendChild(btnsDiv);
+
+    // Create buttons
+    const rockBtn = document.createElement("button");
+    const paperBtn = document.createElement("button");
+    const scissorsBtn = document.createElement("button");
+
+    // Format buttons
+    rockBtn.textContent = "Rock";
+    paperBtn.textContent = "Paper";
+    scissorsBtn.textContent = "Scissors";
+
+    // Append buttons to buttons div
+    btnsDiv.appendChild(rockBtn);
+    btnsDiv.appendChild(paperBtn);
+    btnsDiv.appendChild(scissorsBtn);
+
+    // Attach event listeners to buttons
+}
+
 function getComputerChoice() {
     // This randomly generated number, 0-2 inclusive, determines the computer's choice
     const randomNumber = Math.floor(Math.random() * 3);
@@ -38,3 +66,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame() {}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadButtons();
+});
