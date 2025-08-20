@@ -30,48 +30,56 @@ function attachButtonListeners() {
 function playRound(humanChoice) {
     const computerChoice = getComputerChoice();
 
+    const resultDiv = document.getElementById("result-div");
+
     const shootText = document.getElementById("shoot-text");
+    shootText.hidden = true;
 
     const humanChoiceText = document.createElement("div");
     humanChoiceText.id = "human-choice-text";
     humanChoiceText.className = "result-text";
+    humanChoiceText.textContent = `You chose ${humanChoice}...`;
+    resultDiv.appendChild(humanChoiceText);
 
     const computerChoiceText = document.createElement("div");
     computerChoiceText.id = "computer-choice-text";
     computerChoiceText.className = "result-text";
+    computerChoiceText.textContent = `Computer chose ${computerChoice}...`;
+    resultDiv.appendChild(computerChoiceText);
 
     const winnerText = document.createElement("div");
     winnerText.id = "winner-text";
     winnerText.className = "result-text";
 
     if (humanChoice === computerChoice) {
-        // Tie
-        shootText.hidden = true;
+        winnerText.textContent = "It's a tie!";
     } else if (humanChoice === "rock") {
         if (computerChoice === "paper") {
             // Computer win
-            shootText.hidden = true;
+            winnerText.textContent = "Computer won the round.";
         } else {
             // Human win
-            shootText.hidden = true;
+            winnerText.textContent = "You won the round!";
         }
     } else if (humanChoice === "paper") {
         if (computerChoice === "rock") {
             // Human win
-            shootText.hidden = true;
+            winnerText.textContent = "You won the round!";
         } else {
             // Computer win
-            shootText.hidden = true;
+            winnerText.textContent = "Computer won the round.";
         }
     } else {
         if (computerChoice === "rock") {
             // Computer win
-            shootText.hidden = true;
+            winnerText.textContent = "Computer won the round.";
         } else {
             // Human win
-            shootText.hidden = true;
+            winnerText.textContent = "You won the round!";
         }
     }
+
+    resultDiv.appendChild(winnerText);
 }
 
 function playGame() {}
