@@ -27,7 +27,21 @@ function attachButtonListeners() {
     });
 }
 
+function clearPreviousRoundResultText() {
+    const humanChoiceText = document.getElementById("human-choice-text");
+    const computerChoiceText = document.getElementById("computer-choice-text");
+    const winnerText = document.getElementById("winner-text");
+
+    if (humanChoiceText && computerChoiceText && winnerText) {
+        humanChoiceText.remove();
+        computerChoiceText.remove();
+        winnerText.remove();
+    }
+}
+
 function playRound(humanChoice) {
+    clearPreviousRoundResultText();
+
     const computerChoice = getComputerChoice();
 
     const resultDiv = document.getElementById("result-div");
