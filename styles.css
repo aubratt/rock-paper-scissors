@@ -89,7 +89,11 @@ body {
 
 #rock-btn {
     border: 3px solid darkred;
-    background-color:crimson;
+    background-color: red;
+}
+
+#rock-icon {
+    filter: invert(9%) sepia(70%) saturate(6415%) hue-rotate(359deg) brightness(82%) contrast(111%);
 }
 
 #paper-btn {
@@ -97,15 +101,22 @@ body {
     background-color: deepskyblue;
 }
 
+#paper-icon {
+    filter: invert(37%) sepia(39%) saturate(6202%) hue-rotate(217deg) brightness(95%) contrast(85%);
+}
+
 #scissors-btn {
     border: 3px solid seagreen;
-    background-color: mediumseagreen;
+    background-color: springgreen;
+}
+
+#scissors-icon {
+    filter: invert(44%) sepia(10%) saturate(2182%) hue-rotate(94deg) brightness(101%) contrast(96%);
 }
 
 .btn-icon {
     height: 2.5rem;
     width: auto;
-    filter: invert(25%);
 }
 
 #scoreboard-div {
