@@ -32,10 +32,18 @@ function clearPreviousRoundResultText() {
     const computerChoiceText = document.getElementById("computer-choice-text");
     const winnerText = document.getElementById("winner-text");
 
+    const gameWinnerText = document.getElementById("game-winner-text");
+    const playAgainText = document.getElementById("play-again-text");
+
     if (humanChoiceText && computerChoiceText && winnerText) {
         humanChoiceText.remove();
         computerChoiceText.remove();
         winnerText.remove();
+    }
+
+    if (gameWinnerText && playAgainText) {
+        gameWinnerText.remove();
+        playAgainText.remove();
     }
 }
 
@@ -114,9 +122,35 @@ function playRound(humanChoice) {
     }
 
     resultDiv.appendChild(winnerText);
+
+    checkForGameWin(humanScoreValue, computerScoreValue);
 }
 
-function playGame() {}
+function checkForGameWin(humanScore, computerScore) {
+    if (humanScore === 5 || computerScore === 5) {
+        clearPreviousRoundResultText();
+
+        const gameWinner = humanScore === 5 ? "You" : "Computer";
+
+        const resultDiv = document.getElementById("result-div");
+
+        const gameWinnerText = document.createElement("div");
+        gameWinnerText.id = "game-winner-text";
+        gameWinnerText.class = "result-text";
+        gameWinnerText.textContent = `${gameWinner} won the game!`;
+
+        const playAgainText = document.createElement("div");
+        playAgainText.id = "play-again-text";
+        playAgainText.class = "result-text";
+        playAgainText.textContent = "Select a button below to start a new game.";
+
+        resultDiv.appendChild(gameWinnerText);
+        resultDiv.appendChild(playAgainText);
+
+        document.getElementById("human-score").textContent = "0";
+        document.getElementById("computer-score").textContent = "0";
+    }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     attachButtonListeners();
