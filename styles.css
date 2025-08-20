@@ -55,7 +55,8 @@ body {
 #scoreboard-div,
 #game-options-div,
 #about-div {
-    border: 1px solid #c0c0c0;
+    /* border: 1px solid #c0c0c0; */
+    background-color: rgb(48, 48, 48, 0.6);
     border-radius: 0.5rem;
 }
 
@@ -137,7 +138,7 @@ body {
 
 .score-name,
 .score-value {
-    background-color: #303030;
+    background-color: #3f3f3f;
     border-radius: 0.5rem;
     padding: 1rem;
 }
