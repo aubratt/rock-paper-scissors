@@ -81,6 +81,7 @@ body {
 }
 
 .play-btn {
+    cursor: pointer;
     flex-shrink: 0;
     height: 4.5rem;
     width: 4.5rem;
