@@ -54,6 +54,9 @@ function playRound(humanChoice) {
 
     const resultDiv = document.getElementById("result-div");
 
+    const winconText = document.getElementById("wincon-text");
+    winconText.hidden = true;
+
     const shootText = document.getElementById("shoot-text");
     shootText.hidden = true;
 
@@ -142,7 +145,7 @@ function checkForGameWin(humanScore, computerScore) {
         const playAgainText = document.createElement("div");
         playAgainText.id = "play-again-text";
         playAgainText.class = "result-text";
-        playAgainText.textContent = "Select a button below to start a new game.";
+        playAgainText.textContent = "Click a button to start a new game.";
 
         resultDiv.appendChild(gameWinnerText);
         resultDiv.appendChild(playAgainText);
@@ -155,14 +158,3 @@ function checkForGameWin(humanScore, computerScore) {
 document.addEventListener("DOMContentLoaded", function () {
     attachButtonListeners();
 });
-
-// 1. Human SHOOTS by clicking the rock, paper, or scissors button
-// 2. Determine what human's choice was (event listener)
-// 3. Compare human's choice to computer's choice to determine winner (playRound)
-// 4. Tell human what their choice was, what the computer's choice was, and who won the round
-// 5. Update scoreboard
-// 6. Does either human or computer have a score of 5 now?
-// Yes: Go to step 7
-// No: Go back to step 1
-// 7. Tell human who won the game and show 'play again' button
-// 9. After human clicks 'play again,' go back to step 1
