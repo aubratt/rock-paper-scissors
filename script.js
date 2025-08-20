@@ -11,33 +11,82 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {}
+function attachButtonListeners() {
+    const rockBtn = document.getElementById("rock-btn");
+    const paperBtn = document.getElementById("paper-btn");
+    const scissorsBtn = document.getElementById("scissors-btn");
 
-function playRound(humanChoice, computerChoice) {
+    rockBtn.addEventListener("click", function () {
+        playRound("rock");
+    });
+    paperBtn.addEventListener("click", function () {
+        playRound("paper");
+    });
+    scissorsBtn.addEventListener("click", function () {
+        playRound("scissors");
+    });
+}
+
+function playRound(humanChoice) {
+    const computerChoice = getComputerChoice();
+
+    const shootText = document.getElementById("shoot-text");
+
+    const humanChoiceText = document.createElement("div");
+    humanChoiceText.id = "human-choice-text";
+    humanChoiceText.className = "result-text";
+
+    const computerChoiceText = document.createElement("div");
+    computerChoiceText.id = "computer-choice-text";
+    computerChoiceText.className = "result-text";
+
+    const winnerText = document.createElement("div");
+    winnerText.id = "winner-text";
+    winnerText.className = "result-text";
+
     if (humanChoice === computerChoice) {
         // Tie
+        shootText.hidden = true;
     } else if (humanChoice === "rock") {
         if (computerChoice === "paper") {
             // Computer win
+            shootText.hidden = true;
         } else {
             // Human win
+            shootText.hidden = true;
         }
     } else if (humanChoice === "paper") {
         if (computerChoice === "rock") {
             // Human win
+            shootText.hidden = true;
         } else {
             // Computer win
+            shootText.hidden = true;
         }
     } else {
         if (computerChoice === "rock") {
             // Computer win
+            shootText.hidden = true;
         } else {
             // Human win
+            shootText.hidden = true;
         }
     }
 }
 
 function playGame() {}
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    attachButtonListeners();
 });
+
+// 1. Human SHOOTS by clicking the rock, paper, or scissors button
+// 2. Determine what human's choice was (event listener)
+// 3. Compare human's choice to computer's choice to determine winner (playRound)
+// 4. Tell human what their choice was, what the computer's choice was, and who won the round
+// 5. Update scoreboard
+// 6. Does either human or computer have a score of 5 now?
+// Yes: Go to step 7
+// No: Go back to step 1
+// 7. Tell human who won the game and show 'play again' button
+// 9. After human clicks 'play again,' go back to step 1
