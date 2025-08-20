@@ -1,4 +1,4 @@
-Icons
-<a href="https://www.flaticon.com/free-icons/fist" title="fist icons">Fist icons created by Cap Cool - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/on-hold" title="on hold icons">On hold icons created by Cap Cool - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock paper scissors icons">Rock paper scissors icons created by Cap Cool - Flaticon</a>
+### Icons
+- [Hand (Rock)](https://www.flaticon.com/free-icon/hand_9534498?term=fist&related_id=9534498) by [Cap Cool](https://www.flaticon.com/authors/cap-cool) on [Flaticon](https://www.flaticon.com/)
+- [Hand (Paper)](https://www.flaticon.com/free-icon/hand_9543062?term=on+hold&related_id=9543062) by [Cap Cool](https://www.flaticon.com/authors/cap-cool) on [Flaticon](https://www.flaticon.com/)
+- [Hand (Scissors)](https://www.flaticon.com/free-icon/scissors_9534501?term=scissors&page=1&position=1&origin=style&related_id=9534501) by [Cap Cool](https://www.flaticon.com/authors/cap-cool) on [Flaticon](https://www.flaticon.com/)
